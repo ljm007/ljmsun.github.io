@@ -7,7 +7,7 @@ title: 好心情
 subtitle:
 description:
 author: 好心情
-language:
+language: zh-Hans
 timezone:
 
 # URL
@@ -72,11 +72,12 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: yilia
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/ljmsun/ljmsun.github.io.git
-  branch: master
+  repo:
+   gitee: git@gitee.com:ljmsun/ljmsun.git,master
+   github: git@github.com:ljmsun/ljmsun.github.io.git,master
