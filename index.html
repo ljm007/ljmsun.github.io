@@ -229,6 +229,151 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/11/git在工作中出现的问题锦集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="好心情">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="好心情">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/11/11/git在工作中出现的问题锦集/" itemprop="url">git在工作中出现的问题锦集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-11T14:31:20+08:00">
+                2017-11-11
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="Git-在日常工作中遇到的问题"><a href="#Git-在日常工作中遇到的问题" class="headerlink" title="Git 在日常工作中遇到的问题"></a>Git 在日常工作中遇到的问题</h2><blockquote>
+<ul>
+<li>git 回退</li>
+<li>git 提交代码冲突</li>
+<li>git 未跟踪远程分支</li>
+<li>git ssh密钥对的备份</li>
+<li>git 添加远程仓库</li>
+<li>强迫症问题 <strong>在android studio 上提交代码有时远程分支已经有若干个不冲突的提交会自动merge</strong> 这样就很不好看，可以用<strong>rebase</strong></li>
+</ul>
+</blockquote>
+<p>#####1. git 回退<br>git回退可以用reset命令来实现，git reset –hard id<br>回退前先用git log查看提交历史，看要回退到哪个版本，更进一步还可以用git reflog<br>reset一般有三种使用方式：</p>
+<blockquote>
+<ul>
+<li>git reset –mixed id  这是默认的方式，直接写 git reset id ，就是这个方式，这只会回退commit和index，所有的修改还都在，源码都没有发生变化，变的都只是commit信息回退到某个版本</li>
+<li>git reset –soft id 这只回退了commit，index即暂存区的信息还在，id前面的提交都保存到暂存区里了。这种应用场景一般都是commit信息写的不对想回退重新写commit</li>
+<li>git reset –hard id 完完全全的回退到某个版本，源码会跟回退的版本一模一样</li>
+</ul>
+</blockquote>
+<p>一般用git log 可以查看提交历史<br><img src="./1511163050355.png" alt="Alt text"><br>commit 后面的一大串哈希值就是提交的id，回退时一般只需要输入前五位的值就可以，就像现在我要回退到<strong>‘555’</strong>的版本，输入 <strong>git reset 18e01</strong>即可<br>用git reflog 可以查看所有的历史操作</p>
+<p>#####2. git 提交代码冲突<br>有时候我们在写完若干个提交后push到主分支发生冲突，主要是我们没有在push之前先pull远程仓库的更新到本地分支</p>
+<hr>
+<h4 id="git在团队开发中的正确方式"><a href="#git在团队开发中的正确方式" class="headerlink" title="git在团队开发中的正确方式"></a>git在团队开发中的正确方式</h4><blockquote>
+<ul>
+<li></li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/09/hexo-搭建博客/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -550,7 +695,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-count">3</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -563,7 +708,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">标签</span>
                 
               </div>
